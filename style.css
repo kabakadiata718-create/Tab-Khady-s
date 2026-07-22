@@ -1,0 +1,547 @@
+/* ==============================
+   TAB KHADY'S
+   style.css
+============================== */
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --primary:#4F46E5;
+    --secondary:#7C3AED;
+    --success:#16A34A;
+    --danger:#DC2626;
+
+    --white:#ffffff;
+    --light:#F8FAFC;
+    --gray:#64748B;
+    --dark:#1E293B;
+
+    --shadow:0 15px 40px rgba(0,0,0,.15);
+    --radius:20px;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:var(--dark);
+
+    overflow-x:hidden;
+
+}
+
+/* ===================== */
+
+.page{
+
+    display:none;
+
+    width:100%;
+
+    padding:40px;
+
+}
+
+.page.active{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:fade .5s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===================== */
+
+.container{
+
+    width:100%;
+
+    max-width:900px;
+
+    background:rgba(255,255,255,.95);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:var(--radius);
+
+    padding:45px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+}
+
+/* ===================== */
+
+.logo{
+
+    font-size:80px;
+
+    margin-bottom:20px;
+
+    animation:float 2s infinite ease-in-out;
+
+}
+
+@keyframes float{
+
+    0%{transform:translateY(0);}
+
+    50%{transform:translateY(-10px);}
+
+    100%{transform:translateY(0);}
+
+}
+
+/* ===================== */
+
+h1{
+
+    font-size:52px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+
+}
+
+h2{
+
+    font-size:36px;
+
+    color:var(--primary);
+
+    margin-bottom:25px;
+
+}
+
+.slogan{
+
+    font-size:20px;
+
+    color:var(--gray);
+
+    margin-bottom:40px;
+
+    line-height:1.6;
+
+}
+
+/* ===================== */
+
+button{
+
+    border:none;
+
+    outline:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    transition:.3s;
+
+}
+
+/* Bouton principal */
+
+#btnCommencer,
+#btnExercice,
+#btnValider,
+#btnRejouer,
+#btnAccueil{
+
+    background:linear-gradient(135deg,#4F46E5,#7C3AED);
+
+    color:white;
+
+    padding:16px 35px;
+
+    font-size:18px;
+
+    border-radius:50px;
+
+    margin:10px;
+
+    box-shadow:0 10px 20px rgba(79,70,229,.30);
+
+}
+
+#btnCommencer:hover,
+#btnExercice:hover,
+#btnValider:hover,
+#btnRejouer:hover,
+#btnAccueil:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* ===================== */
+
+.btnRetour{
+
+    background:#E2E8F0;
+
+    color:#334155;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    margin:10px;
+
+}
+
+.btnRetour:hover{
+
+    background:#CBD5E1;
+
+}
+
+/* ===================== */
+
+.table-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+/* ===================== */
+
+.table-btn{
+
+    background:white;
+
+    border:2px solid #E2E8F0;
+
+    padding:25px;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    border-radius:18px;
+
+    transition:.3s;
+
+}
+
+.table-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+    transform:translateY(-8px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 12px 25px rgba(79,70,229,.35);
+
+}
+
+/* ===================== */
+
+#listeMultiplication{
+
+    margin:30px auto;
+
+    max-width:500px;
+
+    text-align:left;
+
+}
+
+.ligne{
+
+    background:#F8FAFC;
+
+    margin:12px 0;
+
+    padding:18px 22px;
+
+    border-left:6px solid var(--primary);
+
+    border-radius:12px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.ligne:hover{
+
+    transform:translateX(10px);
+
+}
+
+/* ===================== */
+
+.progression{
+
+    margin-bottom:35px;
+
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:20px;
+
+    background:#E2E8F0;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+#progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#22C55E,#16A34A);
+
+    transition:.4s;
+
+}
+
+/* ===================== */
+
+#progressText{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:var(--gray);
+
+    font-weight:600;
+
+}
+
+/* ===================== */
+
+#question{
+
+    font-size:52px;
+
+    margin:40px 0;
+
+}
+
+/* ===================== */
+
+#reponse{
+
+    width:220px;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    border:2px solid #CBD5E1;
+
+    text-align:center;
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+}
+
+#reponse:focus{
+
+    border-color:var(--primary);
+
+    outline:none;
+
+}
+
+/* ===================== */
+
+#message{
+
+    margin-top:25px;
+
+    font-size:24px;
+
+    font-weight:600;
+
+    min-height:40px;
+
+}
+
+/* ===================== */
+
+.emoji{
+
+    font-size:90px;
+
+    margin-bottom:20px;
+
+    animation:float 2s infinite;
+
+}
+
+/* ===================== */
+
+#scoreFinal{
+
+    font-size:28px;
+
+    color:var(--gray);
+
+    margin:30px 0;
+
+}
+
+/* ===================== */
+
+.actions{
+
+    margin-top:35px;
+
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+@media(max-width:768px){
+
+.container{
+
+padding:30px 20px;
+
+}
+
+h1{
+
+font-size:40px;
+
+}
+
+h2{
+
+font-size:28px;
+
+}
+
+#question{
+
+font-size:38px;
+
+}
+
+.logo{
+
+font-size:60px;
+
+}
+
+.table-btn{
+
+font-size:18px;
+
+padding:20px;
+
+}
+
+#reponse{
+
+width:180px;
+
+font-size:24px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.page{
+
+padding:15px;
+
+}
+
+.table-grid{
+
+grid-template-columns:1fr;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+#btnCommencer,
+#btnExercice,
+#btnValider,
+#btnAccueil,
+#btnRejouer,
+.btnRetour{
+
+width:100%;
+
+}
+
+}

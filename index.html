@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Khady's - Apprendre les tables de multiplication</title>
+
+    <!-- Police Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================= -->
+    <!-- Écran d'accueil -->
+    <!-- ========================= -->
+
+    <section id="accueil" class="page active">
+
+        <div class="container">
+
+            <div class="logo">
+                📚
+            </div>
+
+            <h1>Tab Khady's</h1>
+
+            <p class="slogan">
+                Apprendre les tables de multiplication de manière amusante.
+            </p>
+
+            <button id="btnCommencer">
+                Commencer
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Choix de la table -->
+    <!-- ========================= -->
+
+    <section id="selection" class="page">
+
+        <div class="container">
+
+            <h2>Choisissez une table</h2>
+
+            <div class="table-grid">
+
+                <button class="table-btn" data-table="2">Table de 2</button>
+                <button class="table-btn" data-table="3">Table de 3</button>
+                <button class="table-btn" data-table="4">Table de 4</button>
+                <button class="table-btn" data-table="5">Table de 5</button>
+                <button class="table-btn" data-table="6">Table de 6</button>
+                <button class="table-btn" data-table="7">Table de 7</button>
+                <button class="table-btn" data-table="8">Table de 8</button>
+                <button class="table-btn" data-table="9">Table de 9</button>
+                <button class="table-btn" data-table="10">Table de 10</button>
+                <button class="table-btn" data-table="11">Table de 11</button>
+                <button class="table-btn" data-table="12">Table de 12</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Mode apprentissage -->
+    <!-- ========================= -->
+
+    <section id="apprentissage" class="page">
+
+        <div class="container">
+
+            <h2 id="titreTable">
+                Table de 2
+            </h2>
+
+            <div id="listeMultiplication">
+
+                <!-- Généré par JavaScript -->
+
+            </div>
+
+            <div class="actions">
+
+                <button id="btnExercice">
+                    Faire les exercices
+                </button>
+
+                <button class="btnRetour">
+                    Retour
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Mode exercice -->
+    <!-- ========================= -->
+
+    <section id="quiz" class="page">
+
+        <div class="container">
+
+            <div class="progression">
+
+                <div class="progress-bar">
+
+                    <div id="progress"></div>
+
+                </div>
+
+                <span id="progressText">
+                    0 / 12
+                </span>
+
+            </div>
+
+            <h2 id="question">
+                2 × 3 = ?
+            </h2>
+
+            <input
+                type="number"
+                id="reponse"
+                placeholder="Votre réponse">
+
+            <button id="btnValider">
+                Valider
+            </button>
+
+            <p id="message"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- Résultat -->
+    <!-- ========================= -->
+
+    <section id="resultat" class="page">
+
+        <div class="container">
+
+            <div class="emoji">
+                🎉
+            </div>
+
+            <h2>Bravo !</h2>
+
+            <p id="scoreFinal">
+                Vous avez obtenu 12/12
+            </p>
+
+            <button id="btnRejouer">
+                Rejouer
+            </button>
+
+            <button id="btnAccueil">
+                Accueil
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
